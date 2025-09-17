@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <h1>Formulário de Contato</h1>
+    <!-- Cabeçalho principal da página, com o texto "Formulário de Contato". -->
+
+    <form action="resposta.html" method="GET">
+      <!-- Início do formulário, que enviará os dados para a página "submit_form.html" usando o método POST. -->
+
+<!--fieldset: Agrupa campos relacionados em uma seção, criando uma caixa ao redor, criando uma separação clara dentro do formulário.. <legend> é usado dentro de um <fieldset> para fornecer uma legenda ou título para o grupo de campos. -->
+    <fieldset>
+      <legend> InformaçõesPessoais:</legend>
+      
+      <!-- Campo para o nome -->
+      <label for="nome">Nome Completo:</label><br />
+      <!-- Rótulo (label) para o campo de nome, descrevendo o que deve ser preenchido. for="idade" conecta o <label> ao campo de formulário com o id="idade". -->
+        <input type="text" id="nome" name="nome" required /><br /><br />
+    </fieldset>
+
+<fieldset>
+    <legend>Data:</legend>
+
+      <label for="data">Data de Hoje:</label> <br>
+      <input type="date" id="data" nome="nome" required > <br> <br>
+
+    </fieldset>
+
+    <fieldset>
+        <legend><h3>Login:</h3></legend>
+        <label for="e-mail">E-mail:</label> <br> <br>
+        <input type="email" id="email" nome="email" required> <br>  
+        <label for="senha">Senha:</label> <br>
+        <input type="password" id="senha" nome="senha" required>
+
+    </fieldset>
+    
+    <fieldset>
+        <Legend><h3> múltipla escolha </h3></Legend>
+        <input type="radio" id="opcao1" name="materia_favorita" value="POO">
+        <label for="opcao1">Programação Orientado a objeto</label><br>
+
+        <input type="radio" id="opcao2" nome="materia_favorita" value="inglês">
+        <label for="opcao2">inglês</label><br>
+
+        <input type="radio" id="opcao3" nome="materia_favorita" value="desenvolvimento web">
+        <label for="opcao3"> desenvolvimento web</label><br>
+
+        <input type="submit" value="Enviar" />
+
+
+
+    </fieldset>
+      <body>
+    
+</html>

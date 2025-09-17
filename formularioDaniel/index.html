@@ -1,0 +1,112 @@
+INDEX.HTML
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <h1>Formulário de Contato</h1>
+    <!-- Cabeçalho principal da página, com o texto "Formulário de Contato". -->
+
+    <form action="resposta.html" method="GET">
+      <!-- Início do formulário, que enviará os dados para a página "submit_form.html" usando o método POST. -->
+
+<!--fieldset: Agrupa campos relacionados em uma seção, criando uma caixa ao redor, criando uma separação clara dentro do formulário.. <legend> é usado dentro de um <fieldset> para fornecer uma legenda ou título para o grupo de campos. -->
+    <fieldset>
+      <legend> InformaçõesPessoais:</legend>
+      
+      <!-- Campo para o nome -->
+      <label for="nome">Nome completo: <br />
+      <!-- Rótulo (label) para o campo de nome, descrevendo o que deve ser preenchido. for="idade" conecta o <label> ao campo de formulário com o id="idade". -->
+      <input type="text" id="nome" name="nome" required /><br /><br />
+      <!-- Campo de entrada de texto onde o usuário digita o nome. "name='nome'" é o nome do campo que será enviado. O atributo required em um campo de entrada (<input>) serve para indicar que o preenchimento desse campo é obrigatório antes que o formulário possa ser enviado. Se um campo marcado como required não for preenchido, o navegador exibirá uma mensagem de erro e impedirá o envio do formulário. -->
+
+      <!-- Campo de número com setas de incremento e decremento -->
+      <label for="quantidade">Quantidade de irmãos:</label><br>
+      <input type="number" id="quantidade" name="quantidade" min="1" max="10"><br /><br />
+      <!--<input type="number">: é o campo de entrada exclusivo de número. Esse campo exibe automaticamente as setas para aumentar ou diminuir o valor. min="1" e max="10": Esses atributos definem o valor mínimo e máximo que o usuário pode selecionar usando as setas. O usuário pode ainda digitar qualquer valor dentro desse intervalo.-->
+
+      <!-- Campo para o e-mail -->
+      <label for="email">E-mail:</label><br />
+      <!-- Rótulo para o campo de e-mail-->
+      <input type="email" id="email" name="email"/><br /><br />
+
+      <label for="password">Senha:</label><br />
+      <!-- Rótulo para o campo de e-mail-->
+      <input type="password" id="senha" name="senha" required /><br /><br />
+      <!-- Campo de entrada de texto para o e-mail. "type='email'" valida o formato de e-mail. "name='email'" será o nome do campo que será enviado. -->
+      </fieldset>
+
+    <fieldset>
+      <legend> Sugestões:</legend>
+
+      <!-- Campo para a mensagem -->
+      <label for="mensagem">Mensagem:</label><br />
+      <!-- Rótulo para o campo de mensagem-->
+      <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea
+      ><br /><br />
+      <!-- Área de texto onde o usuário pode digitar uma mensagem. "rows" e "cols" definem o tamanho da caixa de texto. "name='mensagem'" será o nome do campo que será enviado. -->
+
+      <!-- Campo para senha. Mostrando que também posso usar <p> ao invés de <label>, porém semanicamente não é interessante, pois <label> Melhora a acessibilidade, especialmente para usuários que utilizam tecnologias assistivas, uma vez que ele associa um texto a um campo de formulário específico-->
+      <p>Insira sua senha:</p>
+      <input type="password" />
+
+      <!-- Campo para data -->
+      <p>Insira sua data de nascimento</p>
+      <input type="date" />
+
+      <!--Exemplos de perguntas de múltipla escolha -->
+
+      <!--<input type="radio">: Cria um botão de rádio que permite ao usuário escolher apenas uma opção. Todos os botões de rádio que compartilham o mesmo valor name fazem parte do mesmo grupo.-->
+    </fieldset>
+    
+    <fieldset>
+      <legend> Perguntas de múltipla escolha:</legend>
+      
+      <p>Qual é a sua cor favorita?</p>
+
+      <!-- Opções de resposta, cada uma com um botão de rádio. Quando o formulário é enviado, caso a opção selecionada seja a azul, será enviado como value="Azul".-->
+      <input type="radio" id="opcao1" name="comida_favorita" value="Azul" />
+      <label for="opcao1">Macarrão Italiano</label><br />
+
+      <input type="radio" id="opcao2" name="comida_favorita" value="Vermelho" />
+      <label for="opcao2">Pizza Irlandesa</label><br />
+
+      <input type="radio" id="opcao3" name="comida_favorita" value="Verde" />
+      <label for="opcao3">Macorronada</label><br />
+
+      <input type="radio" id="opcao4" name="comida_favorita" value="Amarelo" />
+      <label for="opcao4">Feijoada</label><br />
+
+      <input type="radio" id="opcao5" name="comida_favorita" value="Roxo" />
+      <label for="opcao5">Rabada</label><br /><br />
+
+      
+      <!--<input type="checkbox">: Cria um botão de checkbox que permite ao usuário escolher mais de uma opção. Todos os botões de checkbox que compartilham o mesmo valor name fazem parte do mesmo grupo.-->
+      <p>Quais são suas comidas favoritas? (Selecione todas que você querer) </p>
+
+      <!--Opções de resposta, cada uma com uma caixa de seleção. Quando o formulário é enviado, todas as opções marcadas são enviadas como uma lista de valores associados ao nome cores_favoritas. Por exemplo, se o usuário marcar "Azul" e "Verde", o formulário enviará algo como cores_favoritas=Azul e cores_favoritas=Verde. -->
+      <input type="checkbox" id="opcao1" name="cores_favoritas" value="Azul" />
+      <label for="opcao1">Macarrão Italiano</label><br />
+
+      <input type="checkbox" id="opcao2" name="cores_favoritas" value="Vermelho"/>
+      <label for="opcao2">Feijoada</label><br />
+
+      <input type="checkbox" id="opcao3" name="cores_favoritas" value="Verde" />
+      <label for="opcao3">Batata frita</label><br />
+
+      <input type="checkbox" id="opcao4" name="cores_favoritas" value="Amarelo" />
+      <label for="opcao4">Pizza francesa</label><br />
+
+      <input type="checkbox" id="opcao5" name="cores_favoritas" value="Roxo" />
+      <label for="opcao5">Aguadiho do sul</label><br /><br />
+
+      <!-- Botão de envio -->
+      <input type="submit" value="Enviar" />
+      <!-- Botão que, ao ser clicado, envia os dados do formulário para a página "submit_form.html". -->
+    </fieldset>
+    </form>
+  </body>
+</html>
